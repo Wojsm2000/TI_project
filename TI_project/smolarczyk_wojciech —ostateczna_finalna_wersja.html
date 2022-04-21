@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+    <script src="zegar.js"></script>
+
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="Images/wieza.jpg">
+    <title>Szachy</title>
+    <meta name="author" content="Wojciech Smolarczyk">
+    <meta name="keywords"
+        content="HTML, CSS, JavaScript, Technologie Informacyjne, Szachy , Chess, Duda , Turniej Kandydatów">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen" href="Styles/style.css">
+    <link rel="stylesheet" media="screen" href="Styles/styl_menu_gorne.css">
+    <link rel="stylesheet" media="screen" href="Styles/styl_menu_boczne.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body style="margin: 0 auto;">
+
+    <header>
+
+        <script>
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                if (scroll < 800) {
+                    if ($(window).width() < 600) {
+                        $('.side-menu-container').fadeOut();
+                        $('.topnav-links').fadeIn();
+                        $('.topnav-links').css({
+                            display: "flex"
+                        });
+                    }
+                    else {
+                        $('.side-menu-container').fadeOut();
+                        $('.topnav-links').fadeIn();
+                        $('.topnav-links').css({
+                            display: "flex"
+                        });
+                    }
+                }
+                else {
+                    if ($(window).width() < 600) {
+                        $('.side-menu-container').fadeOut();
+                        $('.topnav-links').fadeIn();
+                        $('.topnav-links').css({
+                            display: "flex"
+                        });
+                    }
+                    else {
+                        $('.side-menu-container').fadeIn();
+                        $('.topnav-links').fadeOut();
+                    }
+                }
+
+            });
+
+            $(document).ready(function () {
+                $("#button5").click(function () {
+                    $('html, body').animate(
+
+                        {
+                            scrollTop: $("#sekcja1").offset().top
+                        }
+
+
+                        , 2000);
+
+
+                });
+
+
+            });
+            $(document).ready(function () {
+                $("#button6").click(function () {
+                    $('html, body').animate(
+
+                        {
+                            scrollTop: $("#sekcja2").offset().top
+                        }
+
+
+                        , 2000);
+
+
+                });
+
+
+            });
+            $(document).ready(function () {
+                $("#button7").click(function () {
+                    $('html, body').animate(
+
+                        {
+                            scrollTop: $("#sekcja3").offset().top
+                        }
+
+
+                        , 2000);
+
+
+                });
+
+
+            });
+            $(document).ready(function () {
+                $("#button8").click(function () {
+                    $('html, body').animate(
+
+                        {
+                            scrollTop: $("#sekcja4").offset().top
+                        }
+
+
+                        , 2000);
+
+
+                });
+
+
+            });
+            $(document).ready(function () {
+                $("#button1").click(function () {
+                    $('html, body').animate(
+
+                        {
+                            scrollTop: $("#sekcja1").offset().top
+                        }
+
+
+                        , 2000);
+
+
+                });
+
+
+            });
+
+            $(document).ready(function () {
+                $("#button2").click(function () {
+                    $('html, body').animate({
+                        scrollTop: $("#sekcja2").offset().top
+                    }, 2000);
+                });
+            });
+
+            $(document).ready(function () {
+                $("#button3").click(function () {
+                    $('html, body').animate({
+                        scrollTop: $("#sekcja3").offset().top
+                    }, 2000);
+                });
+            });
+
+
+            $(document).ready(function () {
+                $("#button4").click(function () {
+                    $('html, body').animate({
+                        scrollTop: $("#sekcja4").offset().top
+                    }, 2000);
+                });
+            });
+
+
+
+        </script>
+
+
+
+
+        <nav class="topnavbar">
+            <div class="logo"><a href="#" class="logotext">SZACHY</a><i class="material-icons"><img rel="shortcut icon"
+                        alt="Hetman" src="./Images/hetman.jpg" style="width:28px;height:28px;"></i></div>
+            <div class="topnav-links">
+                <ul class="menu">
+                    <li><a href="#sekcja1" id="button1" class="menutext">Debiut</a><i class="material-icons">home</i>
+                    </li>
+                    <li><a href="#sekcja2" id="button2" class="menutext">Gra środkowa</a><i
+                            class="material-icons">settings</i></li>
+                    <li><a href="#sekcja3" id="button3" class="menutext">Końcówka</a><i
+                            class="material-icons">favorite</i></li>
+                    <li><a href="#sekcja4" id="button4" class="menutext">Ja i szachy</a><i
+                            class="material-icons">event</i></li>
+                </ul>
+            </div>
+        </nav>
+
+
+
+    </header>
+    <div class="landing">
+        <img src="./Images/tlo.webp" alt="Biały pion przy czarnych bierkach">
+        <p>https://wallpaperaccess.com/chess-board</p>
+    </div>
+
+    <div class="container-main container">
+        <div class="side-menu-container">
+            <nav class="side-menu">
+                <a href="#sekcja1" id="button5" class="toSec1">
+                    <div><i class="material-icons">home</i></div>
+                </a>
+                <a href="#sekcja2" id="button6" class="toSec2">
+                    <div><i class="material-icons">settings</i></div>
+                </a>
+                <a href="#sekcja3" id="button7" class="toSec3">
+                    <div><i class="material-icons">event</i></div>
+                </a>
+                <a href="#sekcja4" id="button8" class="toSec4">
+                    <div><i class="material-icons">favorite</i></div>
+                </a>
+            </nav>
+        </div>
+
+        <div id="sekcja1" class="container">
+            <h1><q>Debiut</q>, czyli początek</h1>
+            <h3>Jak to wszystko się zaczęło?</h3>
+            <p>Za kolebkę szachów uznawane są Indie. Według źródeł pisanych gra ta była już znana w Persji na dworze
+                szacha Chosrowa I Anoszirwana w latach 70. VI wieku naszej ery, gdzie przywieziona została w darze od
+                indyjskiego radży. Indyjska czaturanga została w Persji przekształcona w czatrang, a po opanowaniu tego
+                kraju przez Arabów uległa kolejnym przemianom (przede wszystkim zrezygnowano z losowania poruszającej
+                się figury za pomocą kostki), po których powstał szatrandż. Kolejna ewolucja nastąpiła po pojawieniu
+                się gry w Europie, nastąpiły wówczas zmiany najbardziej przypominające współczesną grę w szachy
+                (zmieniono reguły gry, dopracowano zasady poruszania się bierek, pojawiły się dodatkowo roszada, mat,
+                promocja, itp).
+
+                Z Sycylii i południowej części Półwyspu Iberyjskiego szachy zostały przeniesione do Włoch i Hiszpanii, a
+                następnie do Francji, Niemiec, Anglii i Skandynawii, gdzie były znane w X–XI wieku. W tym również czasie
+                pojawiły się w Czechach, przywiezione przez kupców podążających z Włoch na północ kontynentu. Na Rusi
+                szachy pojawiły się prawdopodobnie wcześniej, ok. VIII–IX wieku, bezpośrednio ze Wschodu (Iranu i
+                środkowej Azji). Na ziemie polskie trafiły na kilka sposobów: z Czech, poprzez morskie szlaki handlowe
+                oraz z Rusi Kijowskiej. O kultowym wymiarze gry szachowej informuje komediowy poemat Szachy Jana
+                Kochanowskiego odkrywający charakterystyczne dla Polski nazwy i interpretacje figur szachowych. Zgodnie
+                z Kochanowskim była to gra królewska, choć uwielbiali ją też szlachcice i mieszczanie. Interesujące jest
+                też wspomnienie o mistrzach, „starszych”, którzy poznali szachy na poziomie wręcz ezoterycznym.
+
+                W epoce renesansu nastąpił „złoty okres” szachów, szczególnie w Hiszpanii i Włoszech, swój rozkwit
+                osiągając na przełomie XVI i XVII wieku. Gra praktyczna stała już wówczas na wysokim poziomie, głównie
+                dzięki analizom Gioachino Greco, Ruya Lopeza i Alessandro Salvio. Pojawiły się pierwsze podręczniki, a
+                pojedynki mistrzów wzbudzały zainteresowanie coraz szerszych grup społecznych. Zaczęto rozgrywać
+                pierwsze mecze i niezbyt licznie obsadzone turnieje. Powstawało coraz więcej ośrodków życia szachowego,
+                klubów i towarzystw. W połowie XVIII w. pojawiły się dwie indywidualności, od których rozpoczął się nowy
+                etap rozwoju teorii i praktyki szachowej: François Philidor i Filip Stamma. Pierwszy był autorem
+                fundamentalnej Analizy gry w szachy, drugi propagował szachy na terenie Francji i Anglii. W wielu
+                krajach pojawili się nowi mistrzowie – w Anglii Howard Staunton, w Rosji Aleksander Pietrow, we Francji
+                Louis de la Bourdonnais, w Niemczech Adolf Anderssen, a w Stanach Zjednoczonych Paul Morphy – tocząc
+                boje o nieoficjalny tytuł mistrza świata.
+            </p>
+
+
+
+
+
+
+            <div class="photos">
+                <img src="https://img.freepik.com/darmowe-zdjecie/strategia-i-szachowy-pojecie-z-szachowymi-postaciami-na-szachownica-odgornym-widoku_176474-6711.jpg?t=st=1646055543~exp=1646056143~hmac=e3c0e11b54a74cfee4ed431ee8276173c745288d7f2863f628a4d23202773cd0&w=740"
+                    alt="Piłka do koszykówki">
+                <a
+                    href="https://pl.freepik.com/darmowe-zdjecie/strategia-i-szachowy-pojecie-z-szachowymi-postaciami-na-szachownica-odgornym-widoku_8859808.htm#query=szachy&position=47&from_view=search">Link
+                    do obrazka</a>
+            </div>
+            <h3>Bierki</h3>
+            <p>Przeciwnicy dysponują zestawami bierek w odmiennych kolorach. W skład każdego z nich wchodzi szesnaście
+                bierek: król, hetman (potocznie zwany też damą, damką, królową lub królówką), dwa gońce (z niemieckiego
+                nazywane czasami lauframi), dwa skoczki (zwane też popularnie końmi lub konikami), dwie wieże oraz osiem
+                pionów (pionków).
+
+                Wartość figur szachowych może być absolutna lub względna. Przy założeniu, że wartość absolutna piona
+                wynosi 1, względne wartości statyczne figur przedstawiają się następująco:<br><br>
+
+
+
+
+            </p>
+            <ul>
+                <li>hetman – 9 (według niektórych autorów 9,5 lub 10) punktów</li>
+                <li>wieża – 5 punktów</li>
+                <li>goniec – 3 punkty</li>
+                <li>skoczek – 3 punkty</li>
+                <li>król – nie ma przypisanej wartości ze względu na to, że nie można go wymienić, ale jego siłę szacuje
+                    się na około 4 punktów (od 3,5 do 5).</li>
+            </ul>
+
+            <h3>Zasady</h3>
+            <p>Grę zawsze rozpoczynają białe, co daje im pewną inicjatywę w początkowej fazie partii. Gracze na zmianę
+                wykonują posunięcia swoimi bierkami zgodnie z zasadami ruchu dla danej bierki i jeśli wejdzie ona na
+                pole zajmowane przez przeciwnika, zbija jego bierkę.
+
+                Szach jest groźbą zbicia króla, która musi być zażegnana przez przeciwnika w następnym posunięciu (króla
+                nie można zbić). Mat, czyli postawienie króla przeciwnika w szachu, przed którym nie ma obrony, kończy
+                partię i oznacza zwycięstwo gracza, którego bierka matuje króla przeciwnika. Remis występuje w
+                przypadku, gdy: </p>
+            <ul>
+                <li>gracze uzgodnili taki wynik partii</li>
+                <li>na planszy wystąpił pat (jedna ze stron nie może wykonać prawidłowych posunięć, a jej król nie jest
+                    szachowany)</li>
+                <li>żadna ze stron nie posiada środków niezbędnych do wygranej (choćby teoretycznej)</li>
+                <li>skoczek – 3 punkty</li>
+                <li>powstała tzw. martwa pozycja, czyli żaden z graczy nie jest w stanie dać mata nawet przy najlepszej
+                    grze.</li>
+            </ul>
+
+            <p>Partia może zakończyć się remisem (na wniosek jednej ze stron), gdy:</p>
+            <ul>
+                <li>identyczna pozycja na planszy pojawiła się trzykrotnie</li>
+                <li>jedna ze stron daje wiecznego szacha</li>
+                <li>wykonano pięćdziesiąt posunięć bez ruchu pionem i bicia dowolną bierką.</li>
+
+            </ul>
+
+            <p class="sek2">Zasady i historia: <a
+                    href="https://pl.wikipedia.org/wiki/Szachy">https://pl.wikipedia.org/wiki/Szachy</a>
+            </p>
+            <hr>
+        </div>
+        <div id="sekcja2" class="container">
+            <h1>Gra środkowa</h1>
+            <h3>Polacy i 64 pola</h3>
+            <p> Pierwszym Polakiem, który mocno zaznaczył swoją obecność w świecie szachów był Jan Hermann Cukiertort
+                (Johannes Hermann Zukertort). Jest on do dzisaj jedynym Polakiem który grał w meczu o Szachowe
+                Mistrzostwo Świata niestety ulegając Emanuelowi Laskerowi w 1886 roku. W kolejnych latach wielu
+                zawodników pochodzących z terenów Polskich tak
+                bardzo przyczyniło się do rozwoju szachowej teorii debiutów oraz było na tyle silnymi graczami, że
+                otrzymali oni zaszczyt by debiuty te (lub ich warianty) nosiły ich nazwiska.
+                Takie wyróżnienie otrzymali między innymi: Zukertort, Akiba Rubinstein, Szymon Winawer, Ksawery
+                Tartakower czy Mieczysław Najdorf. Szczególnie ten ostatni już na zawsze zostanie zapamiętany, ponieważ
+                wariant obrony sycylijskiej opatrzony jego nazwiskiem jest niezwykle skomplikowany i bogaty
+                teoretycznie. Bywa czasem nazywany Rolls Roycem pośród debiutów a sławy dodał mu jeszcze Netflix, gdyż
+                główni
+                bohaterowie "Gambitu Królowej" w trakcie serialu bardzo często wybierają by grać właśnie wariant
+                Najdorfa. </p>
+            <div class="photos">
+                <img src="Images/Duda.jpg" alt="JKD">
+                <a href="https://wyborcza.pl/51,154903,24122762.html?i=0&disableRedirects=true">Jan-Krzysztof Duda</a>
+            </div>
+            <p> Obecnie zdecydowanie najlepszym polskim graczem jest urodzony w 1998 roku w Krakowie <a
+                    href="https://pl.wikipedia.org/wiki/Jan-Krzysztof_Duda">Jan-Krzysztof Duda</a>. Zawodnik ten plasuje
+                się na 15 miejscu rankingu FIDE z wynikiem 2750 a do liderującego Magnusa Carlsena traci 114 punktów.
+                Jan-Krzysztof będzie pierwszym od wielu lat zawodnikiem z Polski, któremu udało się wywalczyć awans do
+                Turnieju Kandydatów, którego zwycięzca zdobędzie prawo do występu w meczu o Mistrzostwo Świata przeciwko
+                wspomnianemu już Carlsenowi.
+            </p>
+
+            <hr>
+        </div>
+        <div id="sekcja3" class="container">
+            <h1>Końcówka</h1>
+            <div class="photos">
+                <img src="https://img.freepik.com/darmowe-wektory/vintage-czarna-naklejka-szachowa_53876-111375.jpg?t=st=1648329918~exp=1648330518~hmac=3da2f1c1c5a699dc81c55e319de57f4dd824e9807e9e9c840bf5fbb3b6962fcd&w=360"
+                    alt="Skoczek">
+                <a
+                    href="https://pl.freepik.com/darmowe-wektory/vintage-czarna-naklejka-szachowa_16263341.htm#page=2&query=chess&position=43&from_view=search">Link
+                    do obrazka</a>
+            </div>
+            <h3>Turniej pretendentów 2022</h3>
+            <p>Turniej pretendentów 2022 to turniej szachowy organizowany przez Międzynarodową Federację Szachową (FIDE)
+                w celu wyłonienia pretendenta do tytułu Mistrza Świata w szachach klasycznych 2023. Odbędzie się on
+                między 16 czerwca a 5 lipca 2022 w Madrycie.
+
+                Turniej pretendentów 2022 będzie rozgrywany systemem dwukołowym na dystansie 14 partii. Zwycięzca
+                turnieju rozegra mecz o mistrzostwo świata w szachach klasycznych z Magnusem Carlsenem w 2023.
+
+                Turniej rozgrywany jest w tempie 100 minut na 40 posunięć, 50 minut na następne 20 posunięć i 15 minut
+                dodawanych po 60. posunięciu. Ponadto, po każdym posunięciu gracze otrzymują dodatkowe 30 sekund.
+
+                W przypadku dwóch lub więcej graczy z taką samą ilością punktów, ich miejsca ustalane są przez punktację
+                pomocniczą składającą się z Systemu Sonnenborna-Bergera, ilości wygranych partii i rezultatów partii
+                między graczami z tą samą ilością punktów.
+
+                Pula nagród turnieju pretendentów 2022 to 500 000 euro. Zwycięzca turnieju otrzyma 48 000€, zdobywca
+                drugiego miejsca 36 000€, a zdobywca trzeciego miejsca 24 000€. Za każde zdobyte pół punktu zawodnicy
+                otrzymują 3 500€.
+            </p>
+
+            <div class="tableall">
+                <p>Zawodnicy </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Imię i nazwisko</th>
+                            <th>Kraj</th>
+                            <th>Ranking FIDE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jan Niepomniaszczij</td>
+                            <td> Rosja (będzie grał pod flagą FIDE)</td>
+                            <td> 2773 </td>
+                        </tr>
+                        <tr>
+                            <td> Teimour Radjabov </td>
+                            <td> Azerbejdżan</td>
+                            <td>2753</td>
+                        </tr>
+                        <tr>
+                            <td> Jan-Krzysztof Duda</td>
+                            <td> Polska </td>
+                            <td> 2750</td>
+                        </tr>
+                        <tr>
+                            <td> Alireza Firouzja</td>
+                            <td> Francja (dawniej Iran)</td>
+                            <td> 2804</td>
+                        </tr>
+                        <tr>
+                            <td> Fabiano Caruana </td>
+                            <td> USA (dawniej Włochy)</td>
+                            <td>2781</td>
+                        </tr>
+                        <tr>
+                            <td> Hikaru Nakamura</td>
+                            <td> USA</td>
+                            <td>2750</td>
+                        </tr>
+                        <tr>
+                            <td> Richárd Rapport</td>
+                            <td> Węgry</td>
+                            <td>2776</td>
+                        </tr>
+                        <tr>
+                            <td>TBA</td>
+                            <td>TBA</td>
+                            <td>TBA</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <p>Warto zauważyć jedno wolne miejsce. Wynika to z faktu, że urodzony na Ukrainie ale reprezentujący Rosję
+                Siergiej Karjakin został zdyskwalifikowany za skandaliczne wpisy dotyczące wojny na Ukrainie oraz
+                jednoznacznie popierające Putina. Na jego miejsce najprawdopodbniej wejdzie Chińczyk Ding Liren. </p>
+            <p class="sek2">Opis turnieju: <a
+                    href="https://pl.wikipedia.org/wiki/Turniej_pretendent%C3%B3w_2022">https://pl.wikipedia.org/wiki/Turniej_pretendent%C3%B3w_2022</a>
+            </p>
+            <hr>
+        </div>
+        <div id="sekcja4" class="container">
+            <h1>Ja i szachy</h1>
+            <p> Swoją przgodę z szachami rozpocząłem dość niedawno ponieważ w grudniu 2021 minął rok odkąd rozegrałem
+                swoją pierwszą prawdziwą partię, znając wszystkie zasady oraz jak poruszają się dane bierki.
+                Od tego czasu zagrałem prawie 4500 meczy w internecie a także noszę się z zamiarem wystapienia w jakmiś prawdziwym turnieju.
+                Źródłem mojego zainteresowania nie był wcale "Gambit Królowej" (takie nazewnictwo swoją drogą nie ma w ogóle sensu. Queens Gambit tłumaczy się na polski jako gambit hetmański a nie "Gambit królowej" ale rozumiem ,że to właśnie ta druga nazwa jest dużo bardziej atrakcyjna ) a był to HejtPark z udziałem trójki polski arcymistrzów. Pamiętam jak duże wrażenie zrobił na mnie Mateusz Bartel który ograł gospodarza programu, Krzysztofa Stanowskiego, grając "na ślepo". 
+                <p>Poniżej znajduje się gif z według mnie moją najlepszą partią jak do tej pory.
+                Składa się ona jedynie z 26 posunięć co jest dość powszechne na niższym poziomie gry gdzie jeden gracz szybko popełnia błąd prowadzący do porażki. 
+                Silnik szachowy wylicza mi 83.9% dokładności co oznacza, że taką części ruchów zagrałem zgodnie z sugestią najlepszego szachisty w historii :) (komputera).
+                Najlepsi arcymistrzowie w długich często 5 czy 6 godzinnych partiach klasycznych osiągają między 95 a 98 procent więc ze swojego wyniku mogę być dość zadowlony.
+                Szczególnie dumny jestem z poświęcenia dwóch wież na samym końcu partii gdzie prawidłowo "policzyłem" ,że dzięki temu forsownie (przeciwnik nie może nic na to poradzić) matuje przeciwnika.
+
+            </p>
+            <div class="photos">
+                <img src="Images/board.gif" alt="GIF z szachownicą">
+            </div>
+            <div class="listanum">
+                <p>Gambit wiedeński</p>
+                <ol>
+                    <li>e4 e5</li>
+                    <li>Nc3 Nf6</li>
+                    <li>f5 d5</li>
+                    <li>fxe5 Nxe4</li>
+                </ol>
+            </div><div class="listanie">
+                <p>Moje ulubione debiuty</p>
+                <ul>
+                    <li><a
+                            href="https://en.wikipedia.org/wiki/Vienna_Game#:~:text=Four%20Knights%20Game.-,Vienna%20Gambit,-%3A%203.f4%20%5Bedit">Gambit
+                            wiedeński</a></li>
+                    <li><a
+                            href="https://pl.wikipedia.org/wiki/Obrona_Caro-Kann#:~:text=Obrona%20Caro%2DKann,-%5Bedytuj%5D">
+                            Obrona Caro-Kann</a></li>
+                    <li><a
+                            href="https://en.wikipedia.org/wiki/Sicilian_Defence#:~:text=most%20frequently%20played.-,Kalashnikov%20Variation,-%3A%204...e5%205">Obrona
+                            sycylijska : wariant Kałasznikowa</a></li>
+                    <li><a
+                            href="https://en.wikipedia.org/wiki/Giuoco_Piano#:~:text=are%20considered%20inferior.-,Giuoco%20Pianissimo,-%3A%204.d3%20%5Bedit">Partia
+                            włoska :Giuoco Pianissimo</a></li>
+
+                </ul>
+            </div>
+            <div class="tableall">
+                <p>Popularne kanały szachowe</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nazwa</th>
+                            <th>Poziom gry gospodarza </th>
+                            <th>Dla kogo?</th>
+                            <th>Język</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a
+                                href="https://www.youtube.com/channel/UCQHX6ViZmPsWiYSFAyS0a3Q">Gotham Chess</a></td>
+                            <td>Mistrz międzynarodowy (IM) </td>
+                            <td>Przystępny dla nowicjuszy , z dużą dawką humoru. Polecam z całego serca </td>
+                            <td>ENG</td>
+                        </tr>
+                        <tr>
+                            <td><a
+                                href="https://www.youtube.com/c/PolskiZwiazekSzachowy">PZS</a></td>
+                            <td>Arcymistrz (GM)</td>
+                            <td>Bardzo merytoryczne filmy, super społeczność, można zobaczyć wszystkie ważne mecze Polaków i Polek </td>
+                            <td>PL</td>
+                        </tr>
+                        <tr>
+                            <td><a
+                                href="https://www.youtube.com/c/BobbyBoJanglles">BobbyBoJanglles</a></td>
+                            <td>Amator</td>
+                            <td>Możesz poczuć się komfortowo, gospodarz prezentuje typowo amatorski poziom gry co pozwala liczyć warianty razem z nim. </td>
+                            <td>ENG</td>
+                        </tr>
+                    
+                    
+                    </tbody>
+                </table>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <div class="container">
+        <h1 id="tyt">UWAGA WYZWANIE!!!</h1>
+        <p id="ostat">Fajnie ,że dotarłeś/łaś aż tutaj. W nagrodę  znajdujesz ramkę z codziennymi puzzlami szachowymi. Gdy już uda ci się rozwiązać zadanie wróci tu jutro
+            by
+            znowu spawdzić swoje umiejętności. W ciągu tygodnia trudność zadań rośnie by w każdy poniedziałek zacząć znowu od prostej kombinacji.</p>
+        <div class="puzzle">
+            <iframe src="https://www.chess.com/daily_puzzle"></iframe>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Wojciech Smolarczyk , 2022 © Wszelkie prawa zastrzeżone.</p>
+        <div id="zegar">a</div>
+        <script> Czas();</script>
+    </footer>
+</body>
+
+
+
+</html>

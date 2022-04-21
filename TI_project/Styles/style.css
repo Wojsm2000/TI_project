@@ -1,0 +1,310 @@
+*
+{
+    box-sizing: border-box;
+}
+iframe{
+
+    width: 400px; height: 560px;
+
+    border-width: 10px;
+    border-radius: 5px;
+    
+
+}
+
+
+#zegar {
+   
+    height: 50px;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: red;
+    animation: colors 5s infinite;
+  }
+  @keyframes colors {
+    0% {
+      color: red;
+    }
+    19% {
+      color: red;
+    }
+    20% {
+      color: rgb(255, 255, 0);
+    }
+    39% {
+      color: rgb(255, 255, 0);
+    }
+    40% {
+      color: rgb(50, 255, 0);
+    }
+    59% {
+      color: rgb(50, 255, 0);
+    }
+    60% {
+      color: rgb(0, 89, 255);
+    }
+    79% {
+      color: rgb(0, 89, 255);
+    }
+    80% {
+      color: rgb(255, 255, 255);
+    }
+    99% {
+      color: rgb(255, 255, 255);
+    }
+    100% {
+      color: red;
+    }
+  }
+
+:root {
+    --zielony: #4E7838;
+    --czarny: #000000;
+    --bialy:#fff;
+    --niebieski:#5d5de9;
+    --ciemnyniebieski:#2f2f74;
+    --ciemnoczerwony:#331a0c;
+
+  }
+
+
+body
+{
+    background-color: var(--zielony); 
+    color: var(--czarny);
+    font-family: 'Playfair Display', serif;
+}
+
+header
+{
+    background-image: linear-gradient(to right,var(--zielony), var(--czarny)); 
+    color: var(--bialy);
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    width: 100%; 
+    text-align: center; 
+    padding: 0.5% 0;
+}
+.puzzle{
+
+
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+;
+}
+
+.landing
+{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    float: left;
+    top: 0;
+    object-fit: cover;
+    margin-bottom: 5vh;
+    z-index: 1;
+}
+
+.landing img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.landing p
+{
+    display: none;
+}
+
+.container
+{
+    margin-right: 8%; 
+    margin-left: 8%;
+    padding: 1% 2%;
+    text-align: justify;
+}
+
+.photos
+{
+    background-color: var(--bialy);
+    border-radius: 5%;
+    display: block; 
+    width: 70%; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: 3%;
+    padding: 2%;
+    text-align: center;
+}
+
+.photos img
+{
+    width: 100%;
+}
+
+a
+{
+    text-decoration: none;
+    color: var(--niebieski);
+}
+
+a:hover
+{
+    text-decoration: underline;
+    color: var(--ciemnyniebieski);
+}
+
+a:visited
+{
+    color: #484bf1;
+}
+
+a:focus
+{
+    color: #162fc0;
+}
+
+h1
+{
+    color: var(--ciemnoczerwony);
+}
+#sekcja1{
+
+    margin-top: 50%;
+
+}
+
+
+
+
+
+
+
+#sekcja1 h1 
+{
+    text-align: center;
+    
+    
+}
+#sekcja2 h1 
+{
+    text-align: center;
+padding-top:10px ;    
+    
+}
+#sekcja3 h1 
+{
+    text-align: center;
+    padding-top:10px ;
+}
+#sekcja4 h1 
+{
+    text-align: center;
+    padding-top:10px ;
+}
+
+
+#sekcja1, #sekcja2, #sekcja3, #sekcja4
+{
+    min-height: 100vh;
+    
+    
+}
+
+
+hr
+{
+    border-top: 1px dotted var(--zielony);
+}
+
+.listanum, .listanie
+{
+    display: inline-block;
+    width: 44%;
+    background-color: var(--czarny);
+    margin-bottom: 2%;
+    text-align: center;
+    padding-right: 3%;
+    border: solid,var(--bialy);
+    color:var(--bialy);
+}
+
+@media (max-width: 700px)
+{   
+    .listanum, .listanie, table
+    {
+        font-size: 70%;
+    }
+}
+
+
+
+.listanum
+{
+    margin-right: 12%;
+}
+
+.tableall
+{
+    background-color: var(--czarny);
+    text-align: center;
+    padding-top: 0.5%;
+    padding-bottom: 2%;
+    color:var(--bialy);
+    border:1px,solid,var(--bialy);
+}
+
+table
+{    
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    color:var(--bialy);
+    border:1px,solid,var(--bialy);
+
+}
+
+table, tr, td, th
+{
+    border: 1px solid var(--bialy); 
+    /*border-collapse: collapse;*/
+    color:var(--bialy);
+    
+}
+
+tr
+{
+    text-align: center;
+}
+
+
+
+footer
+{ display: flex;
+    justify-content:center;
+    flex-direction: column;
+    background-color: var(--czarny); 
+    width: 100%; 
+    text-align: center; 
+    color: var(--bialy); 
+    padding: 0.5% ;
+}
+
+#tyt{
+text-align: center;
+
+}
+
+#ostat{
+display: flex;
+margin-left:25%;
+margin-right:25%;
+
+}
